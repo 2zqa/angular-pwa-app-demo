@@ -7,12 +7,14 @@ import { environment } from '../environments/environment';
 import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DefaultComponent } from './default/default.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    DefaultComponent
+    DefaultComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

@@ -10,8 +10,4 @@ import {AboutComponent} from "./about/about.component";
 export class AppComponent {
   title = 'angular-pwa-app';
 
-  routes = [
-    { path: '', name: 'Home' },
-    { path: 'about', name: 'About me' }
-  ];
 }
