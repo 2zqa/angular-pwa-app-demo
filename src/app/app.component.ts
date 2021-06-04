@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import {Routes} from "@angular/router";
-import {AboutComponent} from "./about/about.component";
-import {CheckUpdateService} from "./check-update.service";
+import { SwUpdate } from '@angular/service-worker';
 
 @Component({
   selector: 'app-root',
@@ -14,10 +12,10 @@ export class AppComponent {
 
   ngOnInit() {
     //subscribe in the component to the current message
-    this.checkForUpdateService.updateAvailable.subscribe(updateAvailable => this.updateAvailable = updateAvailable);
+    this.swUpdate.available.subscribe(() => this.updateAvailable = true)
   }
 
-  constructor(private checkForUpdateService: CheckUpdateService) {}
+  constructor(private swUpdate: SwUpdate) {}
 
   runUpdate() {
     document.location.reload();
