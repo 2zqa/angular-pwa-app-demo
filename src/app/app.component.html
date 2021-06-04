@@ -1,4 +1,9 @@
+<div *ngIf="updateAvailable" class="aside">
+  <p>Update available! Refresh now, or press this button:</p>
+  <button (click)="runUpdate()">Update now</button>
+</div>
 <h1>Hello world!</h1>
+<p>PWA Demo by Marijn Kok<br>383955<br>ITV2C</p>
 <app-navigation></app-navigation>
 
 <router-outlet></router-outlet>
